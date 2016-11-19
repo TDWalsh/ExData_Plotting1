@@ -33,8 +33,11 @@ Plot1Data <- cbind(SetTime, Plot1Data)
 ##
 
 ## Plot 1
+png("plot1.png", width=480, height=480)
 
 hist(Plot1Data$Global_active_power, 
      col="red", 
      main="Global Active Power", 
      xlab="Global Active Power (kilowatts)")
+
+dev.off()

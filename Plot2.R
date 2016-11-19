@@ -30,9 +30,13 @@ Plot1Data <- cbind(SetTime, Plot1Data)
 ##
 
 ## Plot 2
+png("plot2.png", width=480, height=480)
+
 plot(Plot1Data$SetTime, 
      Plot1Data$Global_active_power, 
      type="l", 
      col="black", 
      xlab="", 
      ylab="Global Active Power (kilowatts)")
+
+dev.off()

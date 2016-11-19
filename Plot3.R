@@ -31,6 +31,8 @@ Plot1Data <- cbind(SetTime, Plot1Data)
 
 ## Plot3
 
+png("plot3.png", width=480, height=480)
+
 columnlines <- c("black", "red", "blue")
 
 labels <- c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3")
@@ -42,3 +44,5 @@ lines(Plot1Data$SetTime, Plot1Data$Sub_metering_2, col=columnlines[2])
 lines(Plot1Data$SetTime, Plot1Data$Sub_metering_3, col=columnlines[3])
 
 legend("topright", legend=labels, col=columnlines, lty="solid")
+
+dev.off()
